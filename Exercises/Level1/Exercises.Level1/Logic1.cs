@@ -17,9 +17,45 @@ public class Logic1
     /// cigarParty(50, false) → true
     /// cigarParty(70, true) → true
     /// </summary>
+    /// 
+
+    //public bool CigarParty(int cigars, bool isWeekend)
+    //{
+    //   //1. ja cigaru skaits ir mazaks par 40, tad balite nav izdevusies
+
+    //    if (cigars < 40)
+    //    {
+    //        return false;
+    //    }
+
+    //  //2.Ja ir brīvdiena tad vienmēr ir izdevusies
+
+    //    if (isWeekend)
+    //    {
+    //        return true;
+    //    }
+
+    //    //3. Ja nav brīvdiena tad cigaru skaitam ir jābūt mazākam par 60
+
+    //    if (cigars <= 60)
+    //    {
+    //        return true;
+    //    }
+        
+    //    return false;
+        
+    //    return true;
+    //}
+
+
     public bool CigarParty(int cigars, bool isWeekend)
     {
-        throw new NotImplementedException();
+        if (cigars >= 40 && (isWeekend || cigars <= 60))
+        {
+            return true;
+        }
+
+        return false;
     }
 
     /// <summary>
