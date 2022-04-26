@@ -72,7 +72,22 @@ public class Logic1
     /// </summary>
     public int DateFashion(int you, int date)
     {
-        throw new NotImplementedException();
+        // 1. Ja kaut viens ir 2 vai mazāk tad 0
+        if (you <= 2 || date <= 2) 
+        { 
+            return 0; 
+        }
+
+        // 2. Ja kaut viens ir 8 vai vairāk, tad 2
+        if (you >= 8 || date >= 8)
+        {
+            return 2;
+        }
+
+        // 3. Citādi 1
+        
+        
+        return 1;
     }
 
     /// <summary>
@@ -87,7 +102,27 @@ public class Logic1
     /// </summary>
     public bool SquirrelPlay(int temp, bool isSummer)
     {
-        throw new NotImplementedException();
+        int maxTemp = 90;
+        if (isSummer) 
+        {
+            maxTemp += 10;
+
+        }
+
+        // 1. Ja temp ir starp 60 un 90 un nav vasara tad atgriezam true
+
+      
+        
+        if (temp >= 60 && temp <= maxTemp)
+        {
+            return true;
+        }
+        // 2. Ja temp ir starp 60 un 100 un ir vasara tad atgriežam true
+       
+     
+        // 3. Citadi atgriežam false 
+
+        return false;
     }
 
     /// <summary>
