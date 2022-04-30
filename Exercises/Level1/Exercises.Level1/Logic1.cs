@@ -138,7 +138,32 @@ public class Logic1
     /// </summary>
     public int CaughtSpeeding(int speed, bool isBirthday)
     {
-        throw new NotImplementedException();
+        if (!(isBirthday))
+        {
+            if (speed <= 60)
+
+                return 0;
+
+            if (speed > 60 && speed <= 80)
+
+                return 1;
+
+            else
+
+                return 2;
+
+        }
+        else if (speed <= 65)
+
+            return 0;
+
+        else if (speed > 65 && speed <= 85)
+
+            return 1;
+
+        else
+
+            return 2;
     }
 
     /// <summary>
@@ -150,9 +175,14 @@ public class Logic1
     /// sortaSum(10, 11) → 21
     /// </summary>
     public int SortaSum(int a, int b)
+    
     {
-        throw new NotImplementedException();
+     if (10 <= a + b && a + b <= 19)
+     return 20;
+     else
+     return a + b;
     }
+    
 
     /// <summary>
     /// Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a boolean
@@ -167,7 +197,21 @@ public class Logic1
     /// </summary>
     public string AlarmClock(int day, bool vacation)
     {
-        throw new NotImplementedException();
+        if (vacation) 
+        {
+            if (day == 0 || day == 6) 
+                return "off";
+            else
+                return "10:00"; 
+        }
+        else 
+        {
+            if (day == 0 || day == 6) 
+                return "10:00";
+            else 
+                return "7:00";
+        }
+
     }
 
     /// <summary>
@@ -181,7 +225,7 @@ public class Logic1
     /// </summary>
     public bool Love6(int a, int b)
     {
-        throw new NotImplementedException();
+        return a == 6 || b == 6 || a + b == 6 || Math.Abs(a - b) == 6;
     }
 
     /// <summary>
