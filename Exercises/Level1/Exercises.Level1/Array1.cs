@@ -17,10 +17,9 @@ public class Array1
     /// firstLast6([6, 1, 2, 3]) → true
     /// firstLast6([13, 6, 1, 2, 3]) → false
     /// </summary>
+    
     public bool FirstLast6(int[] nums)
-    {
-        throw new NotImplementedException();
-    }
+    { return (nums[0] == 6 || nums[nums.Length - 1] == 6); }
 
     /// <summary>
     /// Given an array of ints, return true if the array is length 1 or more, and the first element
@@ -30,10 +29,10 @@ public class Array1
     /// sameFirstLast([1, 2, 3, 1]) → true
     /// sameFirstLast([1, 2, 1]) → true
     /// </summary>
+   
     public bool SameFirstLast(int[] nums)
-    {
-        throw new NotImplementedException();
-    }
+    { return (nums.Length >= 1 && nums[0] == nums[nums.Length - 1]); }
+
 
     /// <summary>
     /// Return an int array length 3 containing the first 3 digits of pi, {3, 1, 4}.
@@ -42,7 +41,8 @@ public class Array1
     /// </summary>
     public int[] MakePi()
     {
-        throw new NotImplementedException();
+        int[] pi = { 3, 1, 4 };
+        return pi;
     }
 
     /// <summary>
@@ -54,9 +54,7 @@ public class Array1
     /// commonEnd([1, 2, 3], [1, 3]) → true
     /// </summary>
     public bool CommonEnd(int[] a, int[] b)
-    {
-        throw new NotImplementedException();
-    }
+    { return (a[0] == b[0] || a[a.Length - 1] == b[b.Length - 1]); }
 
     /// <summary>
     /// Given an array of ints length 3, return the sum of all the elements.
@@ -66,9 +64,7 @@ public class Array1
     /// sum3([7, 0, 0]) → 7
     /// </summary>
     public int Sum3(int[] nums)
-    {
-        throw new NotImplementedException();
-    }
+    { return (nums[0] + nums[1] + nums[2]); }
 
     /// <summary>
     /// Given an array of ints length 3, return an array with the elements "rotated left" so {1, 2,
@@ -80,7 +76,8 @@ public class Array1
     /// </summary>
     public int[] RotateLeft3(int[] nums)
     {
-        throw new NotImplementedException();
+        int[] rotated = { nums[1], nums[2], nums[0] };
+        return rotated;
     }
 
     /// <summary>
@@ -93,7 +90,8 @@ public class Array1
     /// </summary>
     public int[] Reverse3(int[] nums)
     {
-        throw new NotImplementedException();
+        int[] reversed = { nums[2], nums[1], nums[0] };
+        return reversed;
     }
 
     /// <summary>
@@ -106,7 +104,13 @@ public class Array1
     /// </summary>
     public int[] MaxEnd3(int[] nums)
     {
-        throw new NotImplementedException();
+        int[] maxVal = new int[3];
+        maxVal[0] = nums[0];
+        if (nums[2] >= maxVal[0])
+            maxVal[0] = nums[2];
+        maxVal[1] = maxVal[0];
+        maxVal[2] = maxVal[0];
+        return maxVal;
     }
 
     /// <summary>
@@ -120,7 +124,11 @@ public class Array1
     /// </summary>
     public int Sum2(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums.Length >= 2)
+            return (nums[0] + nums[1]);
+        if (nums.Length == 1)
+            return nums[0];
+        return 0;
     }
 
     /// <summary>
@@ -133,7 +141,8 @@ public class Array1
     /// </summary>
     public int[] MiddleWay(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+        int[] mids = { a[1], b[1] };
+        return mids;
     }
 
     /// <summary>
@@ -146,7 +155,8 @@ public class Array1
     /// </summary>
     public int[] MakeEnds(int[] nums)
     {
-        throw new NotImplementedException();
+        int[] temp = { nums[0], nums[nums.Length - 1] };
+        return temp;
     }
 
     /// <summary>
@@ -158,9 +168,10 @@ public class Array1
     /// </summary>
     public bool Has23(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums[0] == 2 || nums[0] == 3)
+            return true;
+        return (nums[1] == 2 || nums[1] == 3);
     }
-
     /// <summary>
     /// Given an int array length 2, return true if it does not contain a 2 or 3.
     /// 
@@ -170,7 +181,9 @@ public class Array1
     /// </summary>
     public bool No23(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums[0] == 2 || nums[0] == 3)
+            return false;
+        return !(nums[1] == 2 || nums[1] == 3);
     }
 
     /// <summary>
